@@ -98,7 +98,7 @@ try {
     <title>Research Projects &mdash; IdentifyShell AI Scientist</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/ai-scientist/css/app.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body class="bg-light">

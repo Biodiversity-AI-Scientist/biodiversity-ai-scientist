@@ -29,7 +29,7 @@ $isConfigActive = ($currentScript === 'configuration.php');
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
     <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center fw-bold" href="/ai-scientist/">
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="projects.php">
             <i class="bi bi-cpu text-primary me-2"></i>
             <span>Biodiversity AI Scientist</span>
         </a>
@@ -39,19 +39,19 @@ $isConfigActive = ($currentScript === 'configuration.php');
         
         <div class="collapse navbar-collapse" id="topSharedNavbar">
             <div class="navbar-nav me-auto">
-                <a class="nav-link <?= $isProjectsActive ? 'active fw-semibold' : '' ?>" href="/ai-scientist/projects.php">
+                <a class="nav-link <?= $isProjectsActive ? 'active fw-semibold' : '' ?>" href="projects.php">
                     <i class="bi bi-folder2-open me-1"></i>Projects
                 </a>
-                <a class="nav-link <?= $isAgendaActive ? 'active fw-semibold' : '' ?>" href="/ai-scientist/research_agenda.php<?= $projParam ?>">
+                <a class="nav-link <?= $isAgendaActive ? 'active fw-semibold' : '' ?>" href="research_agenda.php<?= $projParam ?>">
                     <i class="bi bi-journal-bookmark me-1"></i>Research Agenda
                 </a>
-                <a class="nav-link <?= $isCapabilitiesActive ? 'active fw-semibold' : '' ?>" href="/ai-scientist/capabilities.php<?= $projParam ?>">
+                <a class="nav-link <?= $isCapabilitiesActive ? 'active fw-semibold' : '' ?>" href="capabilities.php<?= $projParam ?>">
                     <i class="bi bi-tools me-1"></i>Capabilities &amp; Tools
                 </a>
-                <a class="nav-link <?= $isConfigActive ? 'active fw-semibold' : '' ?>" href="/ai-scientist/configuration.php">
+                <a class="nav-link <?= $isConfigActive ? 'active fw-semibold' : '' ?>" href="configuration.php">
                     <i class="bi bi-gear me-1"></i>Configuration
                 </a>
-                <a class="nav-link" href="/ai-scientist/help/index.php<?= $projParam ?>">
+                <a class="nav-link" href="help/index.php<?= $projParam ?>">
                     <i class="bi bi-question-circle me-1"></i>Help
                 </a>
             </div>
@@ -65,7 +65,7 @@ $isConfigActive = ($currentScript === 'configuration.php');
                         <?php endif; ?>
                     </span>
                     <?php if ($currentScript !== 'project.php'): ?>
-                        <a href="/ai-scientist/project.php?project_id=<?= $currentProjectId ?>" class="btn btn-sm btn-outline-light" title="Project Overview">
+                        <a href="project.php?project_id=<?= $currentProjectId ?>" class="btn btn-sm btn-outline-light" title="Project Overview">
                             <i class="bi bi-arrow-return-left me-1"></i>Overview
                         </a>
                     <?php endif; ?>

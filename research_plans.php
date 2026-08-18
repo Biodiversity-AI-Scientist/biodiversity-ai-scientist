@@ -115,7 +115,7 @@ $activePage = 'research_plans';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Research Plans - Biodiversity AI Scientist</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/ai-scientist/css/app.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="bg-light">
@@ -128,7 +128,7 @@ $activePage = 'research_plans';
         <div class="alert alert-danger">
             <h1 class="h5">Unable to load project research plans</h1>
             <p class="mb-3"><?= h($error) ?></p>
-            <a href="/ai-scientist/projects.php" class="btn btn-outline-danger">Back to projects</a>
+            <a href="projects.php" class="btn btn-outline-danger">Back to projects</a>
         </div>
     </div>
 <?php else: ?>

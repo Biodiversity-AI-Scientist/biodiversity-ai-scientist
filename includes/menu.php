@@ -151,7 +151,7 @@ $menuItems = [
 
     <div class="small text-uppercase text-muted fw-semibold mt-4 mb-2">Documentation</div>
     <nav>
-        <a class="sidebar-link" href="/ai-scientist/help/index.php<?= !empty($projectId) ? '?project_id=' . (int)$projectId : '' ?>">
+        <a class="sidebar-link" href="help/index.php<?= !empty($projectId) ? '?project_id=' . (int)$projectId : '' ?>">
             <i class="bi bi-book me-1 text-primary"></i> Help Center
         </a>
     </nav>

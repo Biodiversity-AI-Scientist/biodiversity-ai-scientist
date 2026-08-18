@@ -121,7 +121,7 @@ $activePage = 'overview';
         Biodiversity AI Scientist
     </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/ai-scientist/css/app.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         .workflow-step-card {
@@ -144,7 +144,7 @@ $activePage = 'overview';
         <div class="alert alert-danger">
             <h1 class="h5"><i class="bi bi-exclamation-triangle-fill me-2"></i>Unable to open project</h1>
             <p class="mb-3"><?= h($error) ?></p>
-            <a href="/ai-scientist/projects.php" class="btn btn-outline-danger">Back to projects</a>
+            <a href="projects.php" class="btn btn-outline-danger">Back to projects</a>
         </div>
     </div>
 <?php else: ?>
@@ -189,7 +189,7 @@ $activePage = 'overview';
                     <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editProjectModal">
                         <i class="bi bi-pencil me-1"></i>Edit Details
                     </button>
-                    <a href="/ai-scientist/projects.php" class="btn btn-outline-secondary btn-sm">
+                    <a href="projects.php" class="btn btn-outline-secondary btn-sm">
                         <i class="bi bi-arrow-left me-1"></i>All projects
                     </a>
                 </div>

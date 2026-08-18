@@ -1,7 +1,4 @@
 <?php
 
-header(
-    'Location: /ai-scientist/projects.php'
-);
-
+header('Location: projects.php');
 exit;

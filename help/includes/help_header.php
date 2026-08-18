@@ -91,7 +91,7 @@ $topics = [
     <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8') ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="/ai-scientist/css/app.css" rel="stylesheet">
+    <link href="../css/app.css" rel="stylesheet">
     <style>
         .help-hero {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0d6efd 100%);
@@ -174,7 +174,7 @@ $topics = [
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
     <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center fw-bold" href="/ai-scientist/help/index.php<?= $projParam ?>">
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="index.php<?= $projParam ?>">
             <i class="bi bi-book-half text-primary me-2"></i>
             <span>AI Scientist Documentation</span>
         </a>
@@ -217,11 +217,11 @@ $topics = [
 
             <div class="d-flex align-items-center gap-2">
                 <?php if ($projectId): ?>
-                    <a href="/ai-scientist/project.php?project_id=<?= $projectId ?>" class="btn btn-sm btn-outline-light">
+                    <a href="../project.php?project_id=<?= $projectId ?>" class="btn btn-sm btn-outline-light">
                         <i class="bi bi-arrow-left me-1"></i>Back to Project #<?= $projectId ?>
                     </a>
                 <?php else: ?>
-                    <a href="/ai-scientist/projects.php" class="btn btn-sm btn-outline-light">
+                    <a href="../projects.php" class="btn btn-sm btn-outline-light">
                         <i class="bi bi-arrow-left me-1"></i>Back to Workspace
                     </a>
                 <?php endif; ?>
@@ -234,7 +234,7 @@ $topics = [
     <!-- Breadcrumbs -->
     <nav aria-label="breadcrumb" class="mb-3">
         <ol class="breadcrumb bg-white p-2 px-3 rounded shadow-sm border small">
-            <li class="breadcrumb-item"><a href="/ai-scientist/projects.php" class="text-decoration-none"><i class="bi bi-grid me-1"></i>Workspace</a></li>
+            <li class="breadcrumb-item"><a href="../projects.php" class="text-decoration-none"><i class="bi bi-grid me-1"></i>Workspace</a></li>
             <li class="breadcrumb-item"><a href="index.php<?= $projParam ?>" class="text-decoration-none">Help Center</a></li>
             <?php if ($activeTopic !== 'index' && isset($topics[$activeTopic])): ?>
                 <li class="breadcrumb-item active text-dark fw-semibold" aria-current="page"><?= htmlspecialchars($topics[$activeTopic]['title'], ENT_QUOTES, 'UTF-8') ?></li>

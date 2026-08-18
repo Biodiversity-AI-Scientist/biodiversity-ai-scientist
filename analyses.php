@@ -365,9 +365,9 @@ foreach ($runs as $run) {
     >
 
     <link
-        href="/ai-scientist/css/app.css"
+        href="css/app.css"
     <link
-        href="/ai-scientist/css/app.css"
+        href="css/app.css"
         rel="stylesheet"
     >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -396,7 +396,7 @@ foreach ($runs as $run) {
             </p>
 
             <a
-                href="/ai-scientist/projects.php"
+                href="projects.php"
                 class="btn btn-outline-danger"
             >
                 Back to projects

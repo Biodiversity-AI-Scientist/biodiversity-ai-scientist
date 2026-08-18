@@ -260,7 +260,7 @@ require_once __DIR__ . '/includes/navbar.php';
         <div class="alert alert-danger">
             <h1 class="h5"><i class="bi bi-exclamation-triangle-fill me-2"></i>Unable to open investigation plan</h1>
             <p class="mb-3"><?= htmlspecialchars($error, ENT_QUOTES, 'UTF-8') ?></p>
-            <a href="/ai-scientist/projects.php" class="btn btn-outline-danger">Back to projects</a>
+            <a href="projects.php" class="btn btn-outline-danger">Back to projects</a>
         </div>
     </div>
 <?php else: ?>

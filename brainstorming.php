@@ -353,7 +353,7 @@ $latestPlan = !empty($sessionPlans) ? $sessionPlans[0] : null;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Brainstorming - Biodiversity AI Scientist</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/ai-scientist/css/app.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
     <style>
         .chat-bubble-user {
             background-color: #e9ecef;
@@ -380,7 +380,7 @@ $latestPlan = !empty($sessionPlans) ? $sessionPlans[0] : null;
         <div class="alert alert-danger">
             <h1 class="h5">Unable to load project workspace</h1>
             <p class="mb-3"><?= h($error) ?></p>
-            <a href="/ai-scientist/projects.php" class="btn btn-outline-danger">Back to projects</a>
+            <a href="projects.php" class="btn btn-outline-danger">Back to projects</a>
         </div>
     </div>
 <?php else: ?>
@@ -448,7 +448,7 @@ $latestPlan = !empty($sessionPlans) ? $sessionPlans[0] : null;
                         <i class="bi bi-key-fill fs-4 me-3 text-warning"></i>
                         <div>
                             <strong>LLM Gateway Not Configured:</strong> Automated AI brainstorming requires an LLM API key.
-                            Add your API key to your <code>.env</code> file or visit the <a href="/ai-scientist/configuration.php" class="alert-link">Configuration Page</a>.
+                            Add your API key to your <code>.env</code> file or visit the <a href="configuration.php" class="alert-link">Configuration Page</a>.
                         </div>
                     </div>
                 <?php endif; ?>

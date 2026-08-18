@@ -1,6 +1,6 @@
 <?php
 
-$url = 'http://127.0.0.1/ai-scientist/api/health/database';
+$url = 'http://127.0.0.1api/health/database';
 
 $ch = curl_init($url);
 
