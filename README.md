@@ -51,7 +51,8 @@ BAIS core provides standard abstract contracts and local default providers:
 - **`CapabilityAdapter`**: Generic interface connecting scientific algorithms to modular execution engines.
 
 ### Deployment Separation
-The generic BAIS core contains **zero hardcoded dependencies on private infrastructure**. External hardware accelerators, institutional storage clusters, or private laboratory adapters (such as the IdentifyShell deployment integration) register dynamically with the generic `ProviderRegistry` from the deployment side.
+The generic BAIS core contains **zero hardcoded dependencies on private infrastructure**. 
+External hardware accelerators, institutional storage clusters, or private laboratory adapters register dynamically with the generic `ProviderRegistry` from the deployment side.
 
 ---
 

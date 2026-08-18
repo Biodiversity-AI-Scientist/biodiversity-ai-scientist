@@ -78,15 +78,11 @@ class TestPrivateInfrastructureBoundary:
 
     def test_03_settings_default_hosts_are_generic(self):
         """Verify Settings defaults to localhost/generic hosts without private configuration."""
-        settings = Settings(
-            db_host="localhost",
-            db_name="test_db",
-            db_user="user",
-            db_password="pw",
-            _env_file=None,
-        )
+        settings = Settings(_env_file=None)
+        assert settings.db_host == "localhost"
         assert settings.dwh_db_host == "localhost"
         assert settings.datalake_db_host == "localhost"
+        assert not self.PRIVATE_IP_PATTERN.search(settings.db_host)
         assert not self.PRIVATE_IP_PATTERN.search(settings.dwh_db_host)
         assert not self.PRIVATE_IP_PATTERN.search(settings.datalake_db_host)
 

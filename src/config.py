@@ -4,11 +4,11 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     # Primary application database (ai_scientist)
-    db_host: str
+    db_host: str = "localhost"
     db_port: int = 3306
-    db_name: str
-    db_user: str
-    db_password: str
+    db_name: str = "ai_scientist"
+    db_user: str = "ubuntu"
+    db_password: str = "ubuntu"
 
     # External Data Warehouse (DWH) database
     dwh_db_host: str = "localhost"
