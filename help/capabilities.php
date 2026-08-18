@@ -12,7 +12,7 @@ require_once __DIR__ . '/includes/help_header.php';
 <div class="row mb-4">
     <div class="col-12">
         <div class="d-flex align-items-center gap-2 mb-1">
-            <span class="badge bg-primary text-white text-uppercase tracking-wide">Phase 9 &amp; Phase B01 v4</span>
+            <span class="badge bg-primary text-white text-uppercase tracking-wide">Tools &amp; Capabilities</span>
             <h1 class="h3 mb-0 fw-bold">Scientific Capability Registry, Two-Tier Decoupling &amp; Scope Architecture</h1>
         </div>
         <p class="text-muted mb-0">
@@ -45,7 +45,7 @@ require_once __DIR__ . '/includes/help_header.php';
                         <div class="p-3 bg-light rounded border h-100">
                             <div class="fw-bold text-success mb-1">Tier 2: CapabilityImplementation</div>
                             <p class="small text-muted mb-0">
-                                Concrete software adapter bindings (1:N foreign key), provider, execution module, backend runtime (e.g. CUDA Server 94 vs local host), runtime version, and implementation-level scope.
+                                Concrete software adapter bindings (1:N foreign key), provider, execution module, backend runtime (e.g. CUDA GPU worker vs local host), runtime version, and implementation-level scope.
                             </p>
                         </div>
                     </div>
@@ -76,10 +76,10 @@ require_once __DIR__ . '/includes/help_header.php';
                     <div class="col-md-6">
                         <div class="p-3 bg-light rounded border h-100">
                             <div class="d-flex align-items-center gap-2 mb-1">
-                                <span class="badge bg-success">IdentifyShell Specific</span>
-                                <code class="small text-muted">identifyshell_specific</code>
+                                <span class="badge bg-success">Deployment Specific</span>
+                                <code class="small text-muted">deployment_specific</code>
                             </div>
-                            <p class="small text-muted mb-0">Private IdentifyShell pipelines bound to Server 94 GPU workers, specimen photographic databases, or shell segmentation tools (e.g. <code>identifyshell_dinov3_v1</code>).</p>
+                            <p class="small text-muted mb-0">Private laboratory pipelines bound to dedicated GPU workers, specimen photographic archives, or proprietary segmentation tools (e.g. <code>specialized_dinov3_v1</code>).</p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -88,26 +88,26 @@ require_once __DIR__ . '/includes/help_header.php';
                                 <span class="badge text-white" style="background-color: #6f42c1;">Official Extension</span>
                                 <code class="small text-muted">official_extension</code>
                             </div>
-                            <p class="small text-muted mb-0">Specialist, computationally heavy modules reusable across labs (e.g. MaxEnt SDM, Scikit-Allel Fst population differentiation, PyLandStats, BioCLIP adapter).</p>
+                            <p class="small text-muted mb-0">Audited extensions provided by the core AI Scientist platform (e.g. advanced remote sensing plugins, climate layer extractors).</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="p-3 bg-light rounded border h-100">
                             <div class="d-flex align-items-center gap-2 mb-1">
-                                <span class="badge bg-warning text-dark">External Tool</span>
-                                <code class="small text-muted">external_tool</code>
+                                <span class="badge bg-warning text-dark">Third-Party Community</span>
+                                <code class="small text-muted">third_party_community</code>
                             </div>
-                            <p class="small text-muted mb-0">Contracts for established standalone third-party scientific binaries executed via CLI or external batch runners (e.g. <code>iqtree_v2</code> for Maximum Likelihood phylogenetics).</p>
+                            <p class="small text-muted mb-0">User-contributed adapters, external API connectors, and community Python scientific routines.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Capability Matching Engine & Usable Execution Paths -->
+        <!-- Capability Selection Engine -->
         <div class="card shadow-sm border-0 mb-4">
-            <div class="card-header bg-white py-3 border-start border-4 border-purple" style="border-left-color: #6f42c1 !important;">
-                <h5 class="fw-bold text-dark mb-0"><i class="bi bi-cpu text-primary me-2"></i>Deterministic-First Selection Engine &amp; Usable Paths (Phase 9)</h5>
+            <div class="card-header bg-white py-3 border-start border-4 border-info">
+                <h5 class="fw-bold text-dark mb-0"><i class="bi bi-cpu text-primary me-2"></i>Deterministic-First Selection Engine &amp; Usable Paths</h5>
             </div>
             <div class="card-body p-4">
                 <div class="table-responsive mb-3">

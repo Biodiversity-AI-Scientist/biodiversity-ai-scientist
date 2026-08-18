@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 $activeTopic = 'investigation_planning';
-$pageTitle = 'Phase 8: Investigation DAGs & Step Sequencing — AI Scientist Help';
+$pageTitle = 'Investigation DAGs & Step Sequencing — AI Scientist Help';
 
 require_once __DIR__ . '/includes/help_header.php';
 
@@ -12,7 +12,7 @@ require_once __DIR__ . '/includes/help_header.php';
 <div class="row mb-4">
     <div class="col-12">
         <div class="d-flex align-items-center gap-2 mb-1">
-            <span class="badge bg-primary text-white text-uppercase tracking-wide">Phase 8 Architecture</span>
+            <span class="badge bg-primary text-white text-uppercase tracking-wide">Investigation DAGs</span>
             <h1 class="h3 mb-0 fw-bold">Investigation Planning: Directed Acyclic Graphs (DAG) &amp; Step Sequencing</h1>
         </div>
         <p class="text-muted mb-0">
@@ -29,7 +29,7 @@ require_once __DIR__ . '/includes/help_header.php';
             </div>
             <div class="card-body p-4">
                 <p>
-                    Rather than generating flat task lists or executing hard-coded linear scripts, Phase 8 decomposes a scientific question into an explicit <strong>Directed Acyclic Graph (DAG)</strong>:
+                    Rather than generating flat task lists or executing hard-coded linear scripts, the system decomposes a scientific question into an explicit <strong>Directed Acyclic Graph (DAG)</strong>:
                 </p>
 
                 <div class="table-responsive mb-4">

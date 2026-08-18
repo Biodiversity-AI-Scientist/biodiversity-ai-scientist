@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 $activeTopic = 'analyses';
-$pageTitle = 'Phase 10: Empirical Analyses & Execution — AI Scientist Help';
+$pageTitle = 'Empirical Analyses & Execution — AI Scientist Help';
 
 require_once __DIR__ . '/includes/help_header.php';
 
@@ -12,7 +12,7 @@ require_once __DIR__ . '/includes/help_header.php';
 <div class="row mb-4">
     <div class="col-12">
         <div class="d-flex align-items-center gap-2 mb-1">
-            <span class="badge bg-danger text-white text-uppercase tracking-wide">Phase 10 Architecture</span>
+            <span class="badge bg-danger text-white text-uppercase tracking-wide">Experiments &amp; Execution</span>
             <h1 class="h3 mb-0 fw-bold">Empirical Analyses, Experiment Plans &amp; Execution Runs</h1>
         </div>
         <p class="text-muted mb-0">
@@ -29,7 +29,7 @@ require_once __DIR__ . '/includes/help_header.php';
             </div>
             <div class="card-body p-4">
                 <p>
-                    In accordance with <strong>Phase 10A (Terminology &amp; API Migration)</strong>, every computational experiment follows the canonical <strong>Experiment &amp; ExperimentRun</strong> domain model:
+                    Every computational experiment follows the canonical <strong>Experiment &amp; ExperimentRun</strong> domain model:
                 </p>
 
                 <div class="table-responsive mb-4">
@@ -59,8 +59,8 @@ require_once __DIR__ . '/includes/help_header.php';
                             </tr>
                             <tr>
                                 <td class="fw-bold"><code>Analysis</code></td>
-                                <td><em>Phase 13 / 14</em></td>
-                                <td>Reserved for downstream scientific synthesis, hypothesis testing, and biological interpretation of empirical experiment results.</td>
+                                <td><code>/analyses</code></td>
+                                <td>Scientific synthesis, hypothesis testing, and biological interpretation of empirical experiment results.</td>
                             </tr>
                         </tbody>
                     </table>

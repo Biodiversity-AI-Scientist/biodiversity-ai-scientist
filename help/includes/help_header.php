@@ -39,31 +39,31 @@ $topics = [
         'category' => 'Discovery'
     ],
     'research_plans' => [
-        'title' => 'Phase 6: Research Plans',
+        'title' => 'Research Plans & Approval',
         'file' => 'research_plans.php',
         'icon' => 'bi-file-earmark-text-fill',
         'category' => 'Discovery'
     ],
     'scientific_context' => [
-        'title' => 'Phase 7: Scientific Context Engine',
+        'title' => 'Scientific Context Engine',
         'file' => 'scientific_context.php',
         'icon' => 'bi-intersect',
         'category' => 'Discovery'
     ],
     'investigation_planning' => [
-        'title' => 'Phase 8: Investigation DAGs',
+        'title' => 'Investigation DAGs & Steps',
         'file' => 'investigation_planning.php',
         'icon' => 'bi-diagram-2-fill',
         'category' => 'Sequencing'
     ],
     'capabilities' => [
-        'title' => 'Phase 9: Capability Registry',
+        'title' => 'Capability Registry & Tools',
         'file' => 'capabilities.php',
         'icon' => 'bi-tools',
         'category' => 'Sequencing'
     ],
     'analyses' => [
-        'title' => 'Phase 10: Empirical Analyses',
+        'title' => 'Empirical Analyses & Experiments',
         'file' => 'analyses.php',
         'icon' => 'bi-flask-fill',
         'category' => 'Sequencing'
@@ -200,13 +200,13 @@ $topics = [
                         <li><hr class="dropdown-divider"></li>
                         <li><h6 class="dropdown-header">Discovery & Planning</h6></li>
                         <li><a class="dropdown-item" href="brainstorming.php<?= $projParam ?>"><i class="bi bi-lightbulb me-2 text-warning"></i>Brainstorming & Ideation</a></li>
-                        <li><a class="dropdown-item" href="research_plans.php<?= $projParam ?>"><i class="bi bi-file-earmark-text me-2 text-info"></i>Research Plans (Phase 6)</a></li>
-                        <li><a class="dropdown-item" href="scientific_context.php<?= $projParam ?>"><i class="bi bi-intersect me-2 text-success"></i>Context Engine (Phase 7)</a></li>
+                        <li><a class="dropdown-item" href="research_plans.php<?= $projParam ?>"><i class="bi bi-file-earmark-text me-2 text-info"></i>Research Plans & Approval</a></li>
+                        <li><a class="dropdown-item" href="scientific_context.php<?= $projParam ?>"><i class="bi bi-intersect me-2 text-success"></i>Scientific Context Engine</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><h6 class="dropdown-header">Sequencing & Execution</h6></li>
-                        <li><a class="dropdown-item" href="investigation_planning.php<?= $projParam ?>"><i class="bi bi-diagram-2 me-2 text-primary"></i>Investigation DAGs (Phase 8)</a></li>
-                        <li><a class="dropdown-item" href="capabilities.php<?= $projParam ?>"><i class="bi bi-tools me-2 text-secondary"></i>Capabilities & Tools (Phase 9)</a></li>
-                        <li><a class="dropdown-item" href="analyses.php<?= $projParam ?>"><i class="bi bi-flask me-2 text-danger"></i>Empirical Analyses (Phase 10)</a></li>
+                        <li><a class="dropdown-item" href="investigation_planning.php<?= $projParam ?>"><i class="bi bi-diagram-2 me-2 text-primary"></i>Investigation DAGs & Steps</a></li>
+                        <li><a class="dropdown-item" href="capabilities.php<?= $projParam ?>"><i class="bi bi-tools me-2 text-secondary"></i>Capabilities & Tools Registry</a></li>
+                        <li><a class="dropdown-item" href="analyses.php<?= $projParam ?>"><i class="bi bi-flask me-2 text-danger"></i>Empirical Analyses & Experiments</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><h6 class="dropdown-header">Reference</h6></li>
                         <li><a class="dropdown-item" href="faq.php<?= $projParam ?>"><i class="bi bi-question-circle me-2 text-muted"></i>FAQ & Troubleshooting</a></li>

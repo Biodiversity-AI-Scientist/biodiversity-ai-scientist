@@ -34,7 +34,7 @@ require_once __DIR__ . '/includes/help_header.php';
                 </h2>
                 <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                     <div class="accordion-body text-secondary small">
-                        The platform enforces Phase 7 <strong>Scientific Context Engine</strong> provenance rules. Before prompt rendering, empirical facts from MySQL 112 (occurrences, taxonomic records) and relational models (approved research plans, hypotheses) are explicitly labeled with <code>[FACT]</code>, <code>[GBIF_DWH_OCCURRENCE]</code>, and <code>[RESEARCH_PLAN]</code> tags. The LLM Gateway strictly separates empirical facts from model interpretations.
+                        The platform enforces <strong>Scientific Context Engine</strong> provenance rules. Before prompt rendering, empirical facts from the empirical database (occurrences, taxonomic records) and relational models (approved research plans, hypotheses) are explicitly labeled with <code>[FACT]</code>, <code>[GBIF_DWH_OCCURRENCE]</code>, and <code>[RESEARCH_PLAN]</code> tags. The LLM Gateway strictly separates empirical facts from model interpretations.
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@ require_once __DIR__ . '/includes/help_header.php';
                 </h2>
                 <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                     <div class="accordion-body text-secondary small">
-                        The <code>LLMGateway</code> executes an exponential backoff retry loop up to <code>LLM_MAX_ATTEMPTS</code>. If structured output validation fails due to minor JSON syntax errors, the <code>repair_and_parse_json()</code> repair engine repairs truncated or malformed responses. In Phase 9 capability selection, if the LLM remains unreachable, the system automatically falls back to deterministic candidate matching without breaking the workflow.
+                        The <code>LLMGateway</code> executes an exponential backoff retry loop up to <code>LLM_MAX_ATTEMPTS</code>. If structured output validation fails due to minor JSON syntax errors, the <code>repair_and_parse_json()</code> repair engine repairs truncated or malformed responses. During capability selection, if the LLM remains unreachable, the system automatically falls back to deterministic candidate matching without breaking the workflow.
                     </div>
                 </div>
             </div>

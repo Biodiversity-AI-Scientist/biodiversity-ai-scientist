@@ -26,11 +26,11 @@ require_once __DIR__ . '/includes/help_header.php';
     <div class="card-body p-4">
         <div class="row g-4">
             
-            <!-- Phase 1 & 2 -->
+            <!-- Step 1 -->
             <div class="col-md-6">
                 <div class="p-3 bg-light rounded border h-100">
                     <div class="d-flex align-items-center gap-2 mb-2">
-                        <span class="badge bg-primary text-white">Phase 1 &amp; 2</span>
+                        <span class="badge bg-primary text-white">Step 1</span>
                         <h5 class="fw-bold text-dark mb-0">Project &amp; Focal Research Questions</h5>
                     </div>
                     <p class="text-secondary small mb-2">
@@ -44,11 +44,11 @@ require_once __DIR__ . '/includes/help_header.php';
                 </div>
             </div>
 
-            <!-- Phase 3 & 4 -->
+            <!-- Step 2 -->
             <div class="col-md-6">
                 <div class="p-3 bg-light rounded border h-100">
                     <div class="d-flex align-items-center gap-2 mb-2">
-                        <span class="badge bg-warning text-dark">Phase 3 &amp; 4</span>
+                        <span class="badge bg-warning text-dark">Step 2</span>
                         <h5 class="fw-bold text-dark mb-0">Brainstorming &amp; Hypothesis Promotion</h5>
                     </div>
                     <p class="text-secondary small mb-2">
@@ -62,11 +62,11 @@ require_once __DIR__ . '/includes/help_header.php';
                 </div>
             </div>
 
-            <!-- Phase 5 & 6 -->
+            <!-- Step 3 -->
             <div class="col-md-6">
                 <div class="p-3 bg-light rounded border h-100">
                     <div class="d-flex align-items-center gap-2 mb-2">
-                        <span class="badge bg-info text-dark">Phase 5 &amp; 6</span>
+                        <span class="badge bg-info text-dark">Step 3</span>
                         <h5 class="fw-bold text-dark mb-0">Research Plans &amp; Approval Governance</h5>
                     </div>
                     <p class="text-secondary small mb-2">
@@ -80,11 +80,11 @@ require_once __DIR__ . '/includes/help_header.php';
                 </div>
             </div>
 
-            <!-- Phase 7 & 8 -->
+            <!-- Step 4 -->
             <div class="col-md-6">
                 <div class="p-3 bg-light rounded border h-100">
                     <div class="d-flex align-items-center gap-2 mb-2">
-                        <span class="badge bg-success text-white">Phase 7 &amp; 8</span>
+                        <span class="badge bg-success text-white">Step 4</span>
                         <h5 class="fw-bold text-dark mb-0">Investigation DAG &amp; Step Sequencing</h5>
                     </div>
                     <p class="text-secondary small mb-2">
@@ -98,11 +98,11 @@ require_once __DIR__ . '/includes/help_header.php';
                 </div>
             </div>
 
-            <!-- Phase 9 -->
+            <!-- Step 5 -->
             <div class="col-md-6">
                 <div class="p-3 bg-light rounded border h-100">
                     <div class="d-flex align-items-center gap-2 mb-2">
-                        <span class="badge bg-secondary text-white">Phase 9</span>
+                        <span class="badge bg-secondary text-white">Step 5</span>
                         <h5 class="fw-bold text-dark mb-0">Capability Matching &amp; Tool Selection</h5>
                     </div>
                     <p class="text-secondary small mb-2">
@@ -116,11 +116,11 @@ require_once __DIR__ . '/includes/help_header.php';
                 </div>
             </div>
 
-            <!-- Phase 10 -->
+            <!-- Step 6 -->
             <div class="col-md-6">
                 <div class="p-3 bg-light rounded border h-100">
                     <div class="d-flex align-items-center gap-2 mb-2">
-                        <span class="badge bg-danger text-white">Phase 10</span>
+                        <span class="badge bg-danger text-white">Step 6</span>
                         <h5 class="fw-bold text-dark mb-0">Empirical Analyses &amp; Execution</h5>
                     </div>
                     <p class="text-secondary small mb-2">

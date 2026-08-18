@@ -199,13 +199,13 @@ try {
     } elseif (isset($_GET['dep_removed'])) {
         $flashSuccess = 'Dependency edge removed successfully.';
     } elseif (isset($_GET['caps_matched'])) {
-        $flashSuccess = 'Phase 9 capability matching completed across all active investigation steps!';
+        $flashSuccess = 'Capability matching completed across all active investigation steps!';
     } elseif (isset($_GET['cap_matched'])) {
         $flashSuccess = 'Scientific capability matched for this step.';
     } elseif (isset($_GET['cap_overridden'])) {
         $flashSuccess = 'Capability selection updated / overridden successfully.';
     } elseif (isset($_GET['exp_planned'])) {
-        $flashSuccess = 'Phase 10: Experiment pre-specification successfully planned via LLM Gateway Stage 4 reasoning!';
+        $flashSuccess = 'Experiment pre-specification successfully planned via AI reasoning!';
     } elseif (isset($_GET['exp_approved'])) {
         $flashSuccess = 'Experiment approved and frozen for computational execution.';
     }
@@ -324,7 +324,7 @@ require_once __DIR__ . '/includes/navbar.php';
                     <?php if ($selectedQuestionId > 0 && !empty($steps)): ?>
                         <form method="post" action="investigation_plan.php?project_id=<?= $projectId ?>&question_id=<?= $selectedQuestionId ?>" class="d-inline">
                             <input type="hidden" name="action" value="match_capabilities_all">
-                            <button type="submit" class="btn btn-outline-success" title="Run Phase 9 Capability Matching across all active steps">
+                            <button type="submit" class="btn btn-outline-success" title="Run Capability Matching across all active steps">
                                 <i class="bi bi-cpu me-1"></i> Match Capabilities with AI
                             </button>
                         </form>
@@ -635,7 +635,7 @@ require_once __DIR__ . '/includes/navbar.php';
                                             <div class="mt-3 p-3 bg-white border border-primary-subtle rounded shadow-sm">
                                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                                     <div class="fw-bold text-primary">
-                                                        <i class="bi bi-flask-fill me-1"></i> Phase 10 Experiment: <?= htmlspecialchars($boundExp['assumptions']['working_title'] ?? ('Experiment #' . $boundExp['id']), ENT_QUOTES, 'UTF-8') ?>
+                                                        <i class="bi bi-flask-fill me-1"></i> Pre-specified Experiment: <?= htmlspecialchars($boundExp['assumptions']['working_title'] ?? ('Experiment #' . $boundExp['id']), ENT_QUOTES, 'UTF-8') ?>
                                                     </div>
                                                     <div class="d-flex align-items-center gap-2">
                                                         <span class="badge <?= $boundExp['status'] === 'approved' ? 'bg-success' : 'bg-warning text-dark' ?>">
@@ -921,7 +921,7 @@ require_once __DIR__ . '/includes/navbar.php';
                 </div>
                 <div class="modal-body">
                     <p class="text-muted small">
-                        The AI Scientist will synthesize the focal Research Question and approved Research Plan using Phase 7 Grounded Context, creating an explicit DAG of InvestigationSteps.
+                        The AI Scientist will synthesize the focal Research Question and approved Research Plan using grounded context, creating an explicit DAG of InvestigationSteps.
                     </p>
 
                     <div class="mb-3">

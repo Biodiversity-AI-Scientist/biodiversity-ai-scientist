@@ -148,9 +148,9 @@ require_once __DIR__ . '/includes/help_header.php';
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Canonical Experiments (Phase 10 & 10A) -->
+                    <!-- Canonical Experiments -->
                     <tr class="table-light">
-                        <td colspan="3" class="fw-bold text-primary"><i class="bi bi-flask-fill me-1"></i> Canonical Experiments &amp; Experiment Runs (Phase 10 / 10A)</td>
+                        <td colspan="3" class="fw-bold text-primary"><i class="bi bi-flask-fill me-1"></i> Canonical Experiments &amp; Experiment Runs</td>
                     </tr>
                     <tr>
                         <td><span class="badge bg-primary">POST</span></td>
@@ -173,9 +173,9 @@ require_once __DIR__ . '/includes/help_header.php';
                         <td>Returns structured Result records and verified Artifacts (with SHA-256).</td>
                     </tr>
 
-                    <!-- Capabilities & 14 Domains (Phase 9 & B01) -->
+                    <!-- Capabilities & 14 Domains -->
                     <tr class="table-light">
-                        <td colspan="3" class="fw-bold text-success"><i class="bi bi-tools me-1"></i> Capabilities, 4-Tier Scopes &amp; 14 Domains (Phase 9 &amp; B01)</td>
+                        <td colspan="3" class="fw-bold text-success"><i class="bi bi-tools me-1"></i> Capabilities, 4-Tier Scopes &amp; 14 Domains</td>
                     </tr>
                     <tr>
                         <td><span class="badge bg-success">GET</span></td>

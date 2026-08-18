@@ -276,7 +276,7 @@ try {
     if (filter_input(INPUT_GET, 'plan_created') === '1') {
         $notice = 'New Experiment created and linked successfully!';
     } elseif (filter_input(INPUT_GET, 'exp_planned') === '1') {
-        $notice = 'Phase 10: Experiment successfully pre-specified via LLM Stage 4 reasoning!';
+        $notice = 'Experiment successfully pre-specified via LLM reasoning!';
     } elseif (filter_input(INPUT_GET, 'exp_approved') === '1') {
         $notice = 'Experiment approved and frozen for computational execution.';
     } elseif (filter_input(INPUT_GET, 'params_updated') === '1') {
@@ -925,7 +925,7 @@ foreach ($runs as $run) {
                                         <?php if (!empty($expAssumptions['interpretation_criteria'])): ?>
                                             <div class="alert alert-primary-subtle border border-primary-subtle p-3 mb-3 small">
                                                 <div class="fw-bold text-primary mb-1">
-                                                    <i class="bi bi-compass text-primary me-1"></i> Result Interpretation Decision Rules (Phase 13 Protocol):
+                                                    <i class="bi bi-compass text-primary me-1"></i> Result Interpretation Decision Rules:
                                                 </div>
                                                 <div class="text-secondary"><?= nl2br(h($expAssumptions['interpretation_criteria'])) ?></div>
                                             </div>
@@ -1572,7 +1572,7 @@ $planRuns =
                 </div>
                 <div class="modal-body">
                     <div class="alert alert-info small mb-3">
-                        Select an <strong>Investigation Step</strong> to synthesize. The LLM Gateway will assemble full grounded context (Phase 7), bind candidate capability input schemas (Phase 9), pre-specify parameter justifications, and formulate strict interpretation criteria (Phase 13).
+                        Select an <strong>Investigation Step</strong> to synthesize. The system will assemble full grounded context, bind candidate capability input schemas, pre-specify parameter justifications, and formulate strict interpretation criteria.
                     </div>
 
                     <div class="mb-3">

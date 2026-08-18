@@ -33,14 +33,14 @@ require_once __DIR__ . '/includes/help_header.php';
         <h2 class="h4 mb-0 fw-bold">Platform Foundations &amp; System Overview</h2>
     </div>
     <div class="row g-4">
-        <div class="col-md-6 col-lg-4 help-item" data-keywords="architecture server 110 server 94 mysql 112 gpu cuda fast api sqlalchemy alembic svg data flow">
+        <div class="col-md-6 col-lg-4 help-item" data-keywords="architecture control plane compute database gpu cuda fast api sqlalchemy alembic svg data flow">
             <div class="card help-card p-4 shadow-sm" onclick="location.href='architecture.php<?= $projParam ?>'">
                 <div class="help-icon-circle bg-primary-subtle text-primary">
                     <i class="bi bi-diagram-3-fill"></i>
                 </div>
                 <h3 class="h5 fw-bold text-dark mb-2">System Architecture &amp; Data Flow</h3>
                 <p class="text-muted small mb-0">
-                    Tri-node physical infrastructure (Server 110 Control Plane, Server 94 GPU Compute, MySQL 112 DWH Occurrence Layer), REST APIs, and artifact storage trees.
+                    Comprehensive platform topology (Control Plane &amp; UI, GPU/Compute Worker Node, Empirical Data Store), REST APIs, and artifact storage trees.
                 </p>
             </div>
         </div>
@@ -90,24 +90,24 @@ require_once __DIR__ . '/includes/help_header.php';
             </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 help-item" data-keywords="phase 6 research plan analytical stages evidence required validation criteria review approval versioning">
+        <div class="col-md-6 col-lg-4 help-item" data-keywords="research plan analytical stages evidence required validation criteria review approval versioning">
             <div class="card help-card p-4 shadow-sm" onclick="location.href='research_plans.php<?= $projParam ?>'">
                 <div class="help-icon-circle bg-info-subtle text-info-emphasis">
                     <i class="bi bi-file-earmark-text-fill"></i>
                 </div>
-                <h3 class="h5 fw-bold text-dark mb-2">Phase 6: Research Plans</h3>
+                <h3 class="h5 fw-bold text-dark mb-2">Research Plans &amp; Approval</h3>
                 <p class="text-muted small mb-0">
                     Structured research plan formulation, 7-section scientific schemas, version control, analytical stages, and researcher approval lifecycles.
                 </p>
             </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 help-item" data-keywords="phase 7 context engine provenance fact research plan gbif token budget unified context assembly">
+        <div class="col-md-6 col-lg-4 help-item" data-keywords="context engine provenance fact research plan gbif token budget unified context assembly">
             <div class="card help-card p-4 shadow-sm" onclick="location.href='scientific_context.php<?= $projParam ?>'">
                 <div class="help-icon-circle bg-success-subtle text-success">
                     <i class="bi bi-intersect"></i>
                 </div>
-                <h3 class="h5 fw-bold text-dark mb-2">Phase 7: Scientific Context Engine</h3>
+                <h3 class="h5 fw-bold text-dark mb-2">Scientific Context Engine</h3>
                 <p class="text-muted small mb-0">
                     Unified context assembly, strict provenance tagging ([FACT], [RESEARCH_PLAN], [GBIF_DWH_OCCURRENCE]), and token budget constraints.
                 </p>
@@ -123,36 +123,36 @@ require_once __DIR__ . '/includes/help_header.php';
         <h2 class="h4 mb-0 fw-bold">Step Sequencing, Capabilities &amp; Execution</h2>
     </div>
     <div class="row g-4">
-        <div class="col-md-6 col-lg-4 help-item" data-keywords="phase 8 investigation plan dag step dependency kahn topological sort readiness cycle prevention">
+        <div class="col-md-6 col-lg-4 help-item" data-keywords="investigation plan dag step dependency kahn topological sort readiness cycle prevention">
             <div class="card help-card p-4 shadow-sm" onclick="location.href='investigation_planning.php<?= $projParam ?>'">
                 <div class="help-icon-circle bg-primary-subtle text-primary">
                     <i class="bi bi-diagram-2-fill"></i>
                 </div>
-                <h3 class="h5 fw-bold text-dark mb-2">Phase 8: Investigation Planning (DAG)</h3>
+                <h3 class="h5 fw-bold text-dark mb-2">Investigation Planning (DAG)</h3>
                 <p class="text-muted small mb-0">
                     Decomposition of research questions into non-prescriptive Directed Acyclic Graphs, relational dependency edges, Kahn topological sorting, and readiness states.
                 </p>
             </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 help-item" data-keywords="phase 9 phase b01 scientific capability two-tier physical implementation scope dinov3 resnet worms gap 14 domains semantic contracts">
+        <div class="col-md-6 col-lg-4 help-item" data-keywords="scientific capability two-tier physical implementation scope dinov3 resnet worms gap 14 domains semantic contracts">
             <div class="card help-card p-4 shadow-sm" onclick="location.href='capabilities.php<?= $projParam ?>'">
                 <div class="help-icon-circle bg-secondary-subtle text-secondary">
                     <i class="bi bi-tools"></i>
                 </div>
-                <h3 class="h5 fw-bold text-dark mb-2">Phase 9 &amp; B01: Capability Taxonomy &amp; Two-Tier Registry</h3>
+                <h3 class="h5 fw-bold text-dark mb-2">Capability Taxonomy &amp; Registry</h3>
                 <p class="text-muted small mb-0">
                     Two-tier physical decoupling, 14 standardized biodiversity domains, implementation-level 4-tier scope governance, 14 canonical semantic data contracts, and usable execution path gap detection.
                 </p>
             </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 help-item" data-keywords="phase 10 analyses experiment runs parameter pre specification metrics artifacts results storage">
+        <div class="col-md-6 col-lg-4 help-item" data-keywords="analyses experiment runs parameter pre specification metrics artifacts results storage">
             <div class="card help-card p-4 shadow-sm" onclick="location.href='analyses.php<?= $projParam ?>'">
                 <div class="help-icon-circle bg-danger-subtle text-danger">
                     <i class="bi bi-flask-fill"></i>
                 </div>
-                <h3 class="h5 fw-bold text-dark mb-2">Phase 10: Empirical Analyses &amp; Runs</h3>
+                <h3 class="h5 fw-bold text-dark mb-2">Empirical Analyses &amp; Runs</h3>
                 <p class="text-muted small mb-0">
                     Pre-specifying analysis plans, execution runs, metric logging (F1, accuracy, silhouette score), and project artifact persistence.
                 </p>

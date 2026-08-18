@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 $activeTopic = 'scientific_context';
-$pageTitle = 'Phase 7: Scientific Context Engine — AI Scientist Help';
+$pageTitle = 'Scientific Context Engine — AI Scientist Help';
 
 require_once __DIR__ . '/includes/help_header.php';
 
@@ -12,7 +12,7 @@ require_once __DIR__ . '/includes/help_header.php';
 <div class="row mb-4">
     <div class="col-12">
         <div class="d-flex align-items-center gap-2 mb-1">
-            <span class="badge bg-success text-white text-uppercase tracking-wide">Phase 7 Architecture</span>
+            <span class="badge bg-success text-white text-uppercase tracking-wide">Context &amp; Grounding</span>
             <h1 class="h3 mb-0 fw-bold">Scientific Context Engine &amp; Provenance Segregation</h1>
         </div>
         <p class="text-muted mb-0">
@@ -44,17 +44,17 @@ require_once __DIR__ . '/includes/help_header.php';
                         <tbody>
                             <tr>
                                 <td class="fw-bold"><code>InvestigationPlanningContext</code></td>
-                                <td>Phase 8 DAG Generation</td>
+                                <td>Investigation DAG Generation</td>
                                 <td>Approved ResearchPlan, focal question, datasets, empirical constraints, previous results, missing information.</td>
                             </tr>
                             <tr>
                                 <td class="fw-bold"><code>CapabilityMatchingContext</code></td>
-                                <td>Phase 9 Tool Selection</td>
+                                <td>Tool &amp; Capability Selection</td>
                                 <td>Target step goal, candidate capabilities from registry, required input/output MIME types.</td>
                             </tr>
                             <tr>
                                 <td class="fw-bold"><code>ExperimentPlanningContext</code></td>
-                                <td>Phase 10 Analysis Spec</td>
+                                <td>Experiment Pre-Specification</td>
                                 <td>Bound investigation step, selected capability metadata, dataset versions, parameter schemas.</td>
                             </tr>
                         </tbody>

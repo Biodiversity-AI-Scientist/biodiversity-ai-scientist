@@ -353,7 +353,7 @@ $pageQuery = $projectId ? '?project_id=' . $projectId : '';
             <!-- Explanatory Banner -->
             <div class="alert alert-info shadow-sm mb-4">
                 <strong>🏛️ Grounded Software Inventory (Shared Across All Projects):</strong>
-                This inventory catalogs the real software environment (Server 94 GPU nodes, Server 111 web pipelines, external taxonomic APIs, and statistical suites). 
+                This inventory catalogs the real scientific software environment (local/remote GPU nodes, domain web pipelines, external taxonomic APIs, and statistical suites). 
                 Any project can pre-specify <strong>Experiments</strong> and execute <strong>Experiment Runs</strong> against these registered capabilities.
             </div>
 

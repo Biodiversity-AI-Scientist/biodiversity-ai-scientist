@@ -42,31 +42,31 @@ require_once __DIR__ . '/includes/help_header.php';
                     </marker>
                 </defs>
 
-                <!-- 1. Control Plane & Web Server (110) -->
+                <!-- 1. Control Plane & Web Server -->
                 <rect x="30" y="30" width="280" height="200" rx="10" fill="#f8fafc" stroke="#0d6efd" stroke-width="2.5" />
                 <rect x="30" y="30" width="280" height="36" rx="10" fill="#0d6efd" />
-                <text x="170" y="54" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="14">Server 110: Control Plane &amp; UI</text>
+                <text x="170" y="54" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="14">Control Plane &amp; UI</text>
                 <text x="50" y="90" fill="#0f172a" font-family="sans-serif" font-weight="bold" font-size="12">• Apache / PHP 8.3 Workspace UI</text>
                 <text x="50" y="112" fill="#0f172a" font-family="sans-serif" font-weight="bold" font-size="12">• FastAPI Backend (Port 8000)</text>
-                <text x="50" y="134" fill="#64748b" font-family="sans-serif" font-size="11">  - Scientific Context Service (Phase 7)</text>
-                <text x="50" y="152" fill="#64748b" font-family="sans-serif" font-size="11">  - Investigation DAG Engine (Phase 8)</text>
-                <text x="50" y="170" fill="#64748b" font-family="sans-serif" font-size="11">  - Capability Selection Service (Phase 9)</text>
+                <text x="50" y="134" fill="#64748b" font-family="sans-serif" font-size="11">  - Scientific Context Service</text>
+                <text x="50" y="152" fill="#64748b" font-family="sans-serif" font-size="11">  - Investigation DAG Engine</text>
+                <text x="50" y="170" fill="#64748b" font-family="sans-serif" font-size="11">  - Capability Selection Service</text>
                 <text x="50" y="188" fill="#64748b" font-family="sans-serif" font-size="11">  - LLM Gateway &amp; JSON Repair Engine</text>
                 <text x="50" y="210" fill="#0369a1" font-family="sans-serif" font-weight="bold" font-size="11">• SQLAlchemy ORM + Alembic</text>
 
-                <!-- 2. DWH Ground Truth Layer (112) -->
+                <!-- 2. Data Store & Relational World Model -->
                 <rect x="370" y="30" width="240" height="150" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5" />
                 <rect x="370" y="30" width="240" height="36" rx="10" fill="#16a34a" />
-                <text x="490" y="54" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="14">MySQL 112: DWH Ground Truth</text>
+                <text x="490" y="54" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="14">Database &amp; Data Store</text>
                 <text x="390" y="90" fill="#0f172a" font-family="sans-serif" font-weight="bold" font-size="12">• GBIF &amp; OBIS Occurrences</text>
                 <text x="390" y="112" fill="#0f172a" font-family="sans-serif" font-weight="bold" font-size="12">• Specimen Image Archives</text>
                 <text x="390" y="134" fill="#0f172a" font-family="sans-serif" font-weight="bold" font-size="12">• WoRMS Taxonomic Cache</text>
                 <text x="390" y="156" fill="#15803d" font-family="sans-serif" font-size="11">• Scientific World Model Tables</text>
 
-                <!-- 3. GPU Worker & Compute Node (94) -->
+                <!-- 3. GPU Worker & Compute Node -->
                 <rect x="670" y="30" width="250" height="200" rx="10" fill="#faf5ff" stroke="#7c3aed" stroke-width="2.5" />
                 <rect x="670" y="30" width="250" height="36" rx="10" fill="#7c3aed" />
-                <text x="795" y="54" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="14">Server 94: GPU Compute Node</text>
+                <text x="795" y="54" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="14">Compute &amp; Worker Node</text>
                 <text x="690" y="90" fill="#0f172a" font-family="sans-serif" font-weight="bold" font-size="12">• CUDA 12+ Acceleration</text>
                 <text x="690" y="112" fill="#0f172a" font-family="sans-serif" font-weight="bold" font-size="12">• DINOv3 Feature Extractor</text>
                 <text x="690" y="134" fill="#0f172a" font-family="sans-serif" font-weight="bold" font-size="12">• ResNet Supervised Training</text>
@@ -82,11 +82,11 @@ require_once __DIR__ . '/includes/help_header.php';
                 <text x="270" y="384" fill="#78350f" font-family="sans-serif" font-size="11">📁 `results/` (Confusion matrices, PCA projections, statistical tests, metrics JSON)</text>
 
                 <!-- Interconnecting Data Flow Arrows -->
-                <!-- 110 -> 112 (SQL) -->
+                <!-- Control Plane -> Database (SQL) -->
                 <line x1="310" y1="105" x2="370" y2="105" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow)" />
                 <text x="340" y="98" text-anchor="middle" fill="#16a34a" font-family="sans-serif" font-size="10" font-weight="bold">SQL / ORM</text>
 
-                <!-- 110 -> 94 (Job Queue / Invocations) -->
+                <!-- Control Plane -> Compute (Job Queue / Invocations) -->
                 <path d="M 310 160 L 670 160" stroke="#7c3aed" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrow-purple)" />
                 <text x="490" y="152" text-anchor="middle" fill="#7c3aed" font-family="sans-serif" font-size="10" font-weight="bold">Async Job Dispatch &amp; Heartbeat</text>
 

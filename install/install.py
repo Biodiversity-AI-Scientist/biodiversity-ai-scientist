@@ -125,6 +125,10 @@ LLM_BASE_URL=https://api.openai.com/v1
     env_file = repo_root / ".env"
     if not env_file.exists():
         env_file.write_text(env_content)
+        try:
+            os.chmod(env_file, 0o644)
+        except Exception:
+            pass
         log_step("configuration", True, f"Generated runtime configuration with database '{chosen_db_url}'")
     else:
         log_step("configuration", True, f"Existing configuration preserved at '{env_file}'")

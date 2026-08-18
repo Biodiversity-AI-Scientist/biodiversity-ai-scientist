@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 $activeTopic = 'research_plans';
-$pageTitle = 'Phase 6: Research Plans Specification — AI Scientist Help';
+$pageTitle = 'Research Plans Specification — AI Scientist Help';
 
 require_once __DIR__ . '/includes/help_header.php';
 
@@ -12,7 +12,7 @@ require_once __DIR__ . '/includes/help_header.php';
 <div class="row mb-4">
     <div class="col-12">
         <div class="d-flex align-items-center gap-2 mb-1">
-            <span class="badge bg-info text-dark text-uppercase tracking-wide">Phase 6 Specification</span>
+            <span class="badge bg-info text-dark text-uppercase tracking-wide">Research Plans</span>
             <h1 class="h3 mb-0 fw-bold">Research Plans: Specification, Governance &amp; Lifecycle</h1>
         </div>
         <p class="text-muted mb-0">
@@ -25,25 +25,24 @@ require_once __DIR__ . '/includes/help_header.php';
     <div class="col-lg-8">
         <div class="card shadow-sm border-0 mb-4">
             <div class="card-header bg-white py-3">
-                <h5 class="fw-bold text-dark mb-0"><i class="bi bi-file-earmark-text text-primary me-2"></i>Structured 7-Section Scientific Plan Schema</h5>
+                <h5 class="fw-bold text-dark mb-0"><i class="bi bi-file-earmark-text text-primary me-2"></i>Structured Scientific Plan Schema</h5>
             </div>
             <div class="card-body p-4">
                 <p>
-                    Every <code>ResearchPlan</code> record in the scientific world model is defined by 7 mandatory structural fields designed for scientific rigor:
+                    Every <code>ResearchPlan</code> record in the scientific world model is defined by structural fields designed for scientific rigor:
                 </p>
 
                 <div class="table-responsive mb-4">
                     <table class="table table-bordered table-sm align-middle spec-table">
                         <thead>
                             <tr>
-                                <th style="width: 25%;">Section / Field</th>
-                                <th>Scientific Purpose &amp; Contract</th>
+                                <th>Section Field</th>
+                                <th>Type</th>
+                                <th>Biological &amp; Epistemological Role</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold">1. Title &amp; Objective</td>
-                                <td>Clear, testable formulation of the central scientific aim for the project.</td>
                             </tr>
                             <tr>
                                 <td class="fw-bold">2. Scientific Background</td>
@@ -75,7 +74,7 @@ require_once __DIR__ . '/includes/help_header.php';
 
                 <h6 class="fw-bold text-dark mb-2"><i class="bi bi-arrow-repeat text-success me-2"></i>Versioning &amp; Approval Governance</h6>
                 <p class="small text-muted mb-0">
-                    Research plans support iterative refinement. Modifying an approved plan increments the plan's <code>version</code> number and marks previous versions as superseded. An approved plan serves as the primary grounding context for Phase 8 <strong>Investigation Planning (DAG)</strong>.
+                    Research plans support iterative refinement. Modifying an approved plan increments the plan's <code>version</code> number and marks previous versions as superseded. An approved plan serves as the primary grounding context for <strong>Investigation Planning (DAG)</strong>.
                 </p>
             </div>
         </div>

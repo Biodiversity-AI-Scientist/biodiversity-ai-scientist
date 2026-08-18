@@ -34,7 +34,7 @@ require_once __DIR__ . '/includes/help_header.php';
 
                 <h6 class="fw-bold text-dark mt-4 mb-2">Key Operating Principles:</h6>
                 <ol class="ps-3 text-secondary small">
-                    <li class="mb-2"><strong>Ground Truth Occurrence Grounding:</strong> At the start of a session, the backend queries MySQL 112 for real occurrence counts, geographic bounding boxes, and image availability for the target taxa.</li>
+                    <li class="mb-2"><strong>Ground Truth Occurrence Grounding:</strong> At the start of a session, the backend queries the empirical data store for real occurrence counts, geographic bounding boxes, and image availability for the target taxa.</li>
                     <li class="mb-2"><strong>Cumulative Context:</strong> The LLM Gateway passes the last <code>N</code> conversation turns to ensure continuity across follow-up questions and refined hypotheses.</li>
                     <li class="mb-2"><strong>Structured Candidates:</strong> Every assistant reply extracts concrete candidate <strong>Questions</strong> and <strong>Hypotheses</strong> into the <code>session_candidates</code> table with status <code>proposed</code>.</li>
                 </ol>
