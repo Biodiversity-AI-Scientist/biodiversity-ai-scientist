@@ -4,6 +4,8 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     # Primary application database (ai_scientist)
+    database_url: str | None = None
+    app_port: int = 8000
     db_host: str = "localhost"
     db_port: int = 3306
     db_name: str = "ai_scientist"

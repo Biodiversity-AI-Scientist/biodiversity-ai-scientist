@@ -56,20 +56,35 @@ External hardware accelerators, institutional storage clusters, or private labor
 
 ---
 
-## 🚀 Quick Start (Development)
+## 🚀 Installation & Quick Start
 
-### Prerequisites
-- Python 3.12+
-- Fast-API / Uvicorn
-- SQLAlchemy & SQLite / MySQL
-
-### Setup
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/Biodiversity-AI-Scientist/biodiversity-ai-scientist.git
 cd biodiversity-ai-scientist
-python3 -m venv .venv
+```
+
+### 2. Run Preflight Check (Optional)
+```bash
+python3 install/preflight.py --port 8000
+```
+
+### 3. Run Canonical Public Installer
+```bash
+python3 install/install.py --port 8000
+```
+*The installer automatically validates prerequisites, provisions an isolated virtual environment (`.venv`), installs required dependencies, generates initial runtime configuration, and initializes the database schema.*
+
+### 4. Start the Application
+```bash
 source .venv/bin/activate
-pip install -r requirements.txt
+uvicorn src.main:app --host 0.0.0.0 --port 8000
+```
+
+### 5. Verify Health & Core Registry
+```bash
+curl http://127.0.0.1:8000/health
+# Response: {"status": "ok"}
 ```
 
 ### Running Tests

@@ -7,26 +7,40 @@ from src.config import settings
 # ---------------------------------------------------------------------------
 # Primary Application Database (ai_scientist)
 # ---------------------------------------------------------------------------
-database_url = URL.create(
-    drivername="mysql+pymysql",
-    username=settings.db_user,
-    password=settings.db_password,
-    host=settings.db_host,
-    port=settings.db_port,
-    database=settings.db_name,
-    query={"charset": "utf8mb4"},
-)
+if settings.database_url:
+    db_conn_str = settings.database_url
+    if db_conn_str.startswith("sqlite"):
+        engine = create_engine(
+            db_conn_str,
+            connect_args={"check_same_thread": False},
+        )
+    else:
+        engine = create_engine(
+            db_conn_str,
+            pool_pre_ping=True,
+            pool_recycle=3600,
+        )
+else:
+    database_url = URL.create(
+        drivername="mysql+pymysql",
+        username=settings.db_user,
+        password=settings.db_password,
+        host=settings.db_host,
+        port=settings.db_port,
+        database=settings.db_name,
+        query={"charset": "utf8mb4"},
+    )
 
-engine = create_engine(
-    database_url,
-    pool_pre_ping=True,
-    pool_recycle=3600,
-    connect_args={
-        "connect_timeout": 5,
-        "read_timeout": 5,
-        "write_timeout": 5,
-    },
-)
+    engine = create_engine(
+        database_url,
+        pool_pre_ping=True,
+        pool_recycle=3600,
+        connect_args={
+            "connect_timeout": 5,
+            "read_timeout": 5,
+            "write_timeout": 5,
+        },
+    )
 
 SessionLocal = sessionmaker(
     bind=engine,
