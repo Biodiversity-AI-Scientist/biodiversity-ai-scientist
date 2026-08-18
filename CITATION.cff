@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Biodiversity AI Scientist"
+type: software
+authors:
+  - name: "Biodiversity AI Scientist Contributors"
+version: "0.1.0-alpha"
+license: "Apache-2.0"
+repository-code: "https://github.com/Biodiversity-AI-Scientist/biodiversity-ai-scientist"
+url: "https://github.com/Biodiversity-AI-Scientist/biodiversity-ai-scientist"
+abstract: "An open-source scientific software platform for AI-assisted biodiversity research, structured hypothesis generation, and reproducible capability execution."
+keywords:
+  - biodiversity
+  - artificial intelligence
+  - taxonomy
+  - ecology
+  - scientific discovery
