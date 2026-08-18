@@ -10,14 +10,8 @@ from src.models import (
     ResearchQuestion,
     Hypothesis,
     BrainstormingSession,
-    BrainstormingMessage,
-    InvestigationGraph,
     InvestigationStep,
     ResearchPlan,
-    Experiment,
-    ExperimentRun,
-    AnalysisPlan,
-    AnalysisRun,
 )
 
 router = APIRouter(prefix="/projects", tags=["projects"])
@@ -35,65 +29,53 @@ def export_project_reproducibility_package(
     if not project:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Project {project_id} not found.")
 
-    questions = db.scalars(select(ResearchQuestion).where(ResearchQuestion.research_project_id == project_id)).all()
-    sessions = db.scalars(select(BrainstormingSession).where(BrainstormingSession.research_project_id == project_id)).all()
-    plans = db.scalars(select(ResearchPlan).where(ResearchPlan.research_project_id == project_id)).all()
+    questions = db.scalars(select(ResearchQuestion).where(ResearchQuestion.project_id == project_id)).all()
+    sessions = db.scalars(select(BrainstormingSession).where(BrainstormingSession.project_id == project_id)).all()
+    plans = db.scalars(select(ResearchPlan).where(ResearchPlan.project_id == project_id)).all()
+    steps = db.scalars(select(InvestigationStep).where(InvestigationStep.project_id == project_id)).all()
 
     # Collect questions & hypotheses
     questions_data = []
     for q in questions:
-        hypotheses = db.scalars(select(Hypothesis).where(Hypothesis.research_question_id == q.id)).all()
-        graphs = db.scalars(select(InvestigationGraph).where(InvestigationGraph.research_question_id == q.id)).all()
-
-        graphs_data = []
-        for g in graphs:
-            steps = db.scalars(select(InvestigationStep).where(InvestigationStep.investigation_graph_id == g.id)).all()
-            graphs_data.append({
-                "id": g.id,
-                "title": g.title,
-                "status": g.status,
-                "steps": [
-                    {
-                        "step_number": s.step_number,
-                        "title": s.title,
-                        "description": s.description,
-                        "status": s.status,
-                    }
-                    for s in steps
-                ]
-            })
+        hypotheses = db.scalars(select(Hypothesis).where(Hypothesis.question_id == q.id)).all()
+        q_steps = [s for s in steps if s.question_id == q.id]
 
         questions_data.append({
             "id": q.id,
-            "question_text": q.question_text,
+            "question": q.question,
             "status": q.status,
+            "source": q.source,
             "hypotheses": [
                 {
                     "id": h.id,
                     "statement": h.statement,
+                    "rationale": h.rationale,
                     "status": h.status,
+                    "source": h.source,
                 }
                 for h in hypotheses
             ],
-            "investigation_graphs": graphs_data,
+            "investigation_steps": [
+                {
+                    "id": s.id,
+                    "step_number": s.step_number,
+                    "title": s.title,
+                    "description": s.description,
+                    "status": s.status,
+                }
+                for s in q_steps
+            ],
         })
 
     # Collect brainstorming sessions
     sessions_data = []
     for s in sessions:
-        msgs = db.scalars(select(BrainstormingMessage).where(BrainstormingMessage.brainstorming_session_id == s.id)).all()
         sessions_data.append({
             "id": s.id,
-            "title": s.title,
+            "initial_idea": s.initial_idea,
+            "status": s.status,
+            "messages": s.messages,
             "created_at": s.created_at.isoformat() if s.created_at else None,
-            "messages": [
-                {
-                    "role": m.role,
-                    "content": m.content,
-                    "timestamp": m.timestamp.isoformat() if m.timestamp else None,
-                }
-                for m in msgs
-            ]
         })
 
     return {
@@ -103,6 +85,7 @@ def export_project_reproducibility_package(
             "id": project.id,
             "title": project.title,
             "objective": project.objective,
+            "status": project.status,
             "created_at": project.created_at.isoformat() if project.created_at else None,
             "archived_at": project.archived_at.isoformat() if project.archived_at else None,
         },
