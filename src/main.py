@@ -22,6 +22,9 @@ from src.routers.llm_gateway import router as llm_gateway_router
 from src.routers.scientific_capability import router as scientific_capability_router
 from src.routers.scientific_context import router as scientific_context_router
 from src.routers.investigation_step import router as investigation_step_router
+from src.routers.demo_seeder import router as demo_seeder_router
+from src.routers.config_manager import router as config_manager_router
+from src.routers.project_export import router as project_export_router
 
 from src.routers.llm_gateway import gateway_status_payload
 
@@ -99,6 +102,9 @@ app.include_router(llm_gateway_router)
 app.include_router(scientific_capability_router)
 app.include_router(scientific_context_router)
 app.include_router(investigation_step_router)
+app.include_router(demo_seeder_router)
+app.include_router(config_manager_router)
+app.include_router(project_export_router)
 
 
 
