@@ -182,6 +182,46 @@ def check_filesystem_writable(target_dir: Path) -> Dict[str, Any]:
         }
 
 
+def check_php_environment() -> Dict[str, Any]:
+    php_path = shutil.which("php")
+    if php_path:
+        import subprocess
+        try:
+            res = subprocess.run([php_path, "-r", "echo PHP_VERSION;"], capture_output=True, text=True, timeout=5)
+            php_ver = res.stdout.strip()
+            return {
+                "id": "php_environment",
+                "name": "PHP Web Interface Engine",
+                "status": "PASS",
+                "mandatory": False,
+                "detected": f"PHP {php_ver} ({php_path})",
+                "required": "PHP >= 8.0 / Apache / Nginx",
+                "message": f"PHP {php_ver} detected. Web UI can be served via Apache or `php -S`.",
+                "remediation": None,
+            }
+        except Exception:
+            return {
+                "id": "php_environment",
+                "name": "PHP Web Interface Engine",
+                "status": "PASS",
+                "mandatory": False,
+                "detected": f"Found at {php_path}",
+                "required": "PHP >= 8.0",
+                "message": "PHP CLI detected in PATH.",
+                "remediation": None,
+            }
+    return {
+        "id": "php_environment",
+        "name": "PHP Web Interface Engine",
+        "status": "WARNING",
+        "mandatory": False,
+        "detected": "Not in PATH",
+        "required": "PHP >= 8.0 (Optional for Web UI)",
+        "message": "PHP binary not found in PATH. Web UI requires PHP/Apache, though backend REST API remains fully operational.",
+        "remediation": "Install PHP 8.2+ (`sudo apt install php-cli php-curl`).",
+    }
+
+
 def run_all_preflights(
     target_dir: Path,
     port: int = 8000,
@@ -192,6 +232,7 @@ def run_all_preflights(
         check_python_version(),
         check_venv_support(),
         check_git(),
+        check_php_environment(),
         check_disk_space(target_dir),
         check_filesystem_writable(target_dir),
         check_port_availability(port, host=host),
